@@ -19,6 +19,10 @@ app.get("/student", (req, res) => {
   res.json(student);
 });
 
+app.get("/insta",(req,res)=>{
+    res.redirect("https://www.instagram.com")
+})
+
 app.listen(3000, () => {
   console.log("Server is running");
 });
