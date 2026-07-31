@@ -5,7 +5,7 @@ app.get("/", (req, res) => {
   res.send("Welcome");
 });
 
-app.get("/student/:id", (req, res) => {
+app.get("/student/:id/", (req, res) => {
   //route parameter
   res.send(`Student Id: ${req.params.id}`);
 });
