@@ -24,6 +24,8 @@ const express = require("express")
 const app = express()
 require("./db")
 const Student = require("./models/studentSchema")
+const connectDB = require("./db")
+
 
 const a = new Student({
     name:"Minisha",
