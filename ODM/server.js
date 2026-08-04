@@ -56,14 +56,22 @@ require("./config/db");
 //   });
 
 //using exists()
-Student.exists({ name: "Linc" })
-  .then((x) => {
-    if (x) {
-      console.log("User found");
-    } else {
-      console.log("User Not Found");
-    }
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// Student.exists({ name: "Linc" })
+//   .then((x) => {
+//     if (x) {
+//       console.log("User found");
+//     } else {
+//       console.log("User Not Found");
+//       Student.create({
+//         name: "Linc",
+//         age: 23,
+//         city: "Chennai",
+//         course: "Cloud",
+//         isActive: false,
+//       });
+//       console.log("User created");
+//     }
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
