@@ -23,6 +23,17 @@ app.get("/insta",(req,res)=>{
     res.redirect("https://www.instagram.com")
 })
 
+app.get("/login",(req,res)=>{
+    setTimeout(()=>{
+        res.redirect("/home")
+    })
+})
+
+app.get("/log",(req,res)=>{
+    res.send("Welcomeeeee")
+})
+
+
 app.listen(3000, () => {
   console.log("Server is running");
 });
