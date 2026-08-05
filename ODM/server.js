@@ -35,11 +35,11 @@ require("./config/db");
 
 //2.read operation
 // using find() =>>>>>>>>>>>>>--------- return an array []
-// Student.find({}, {name:1})
-// .then((x)=>console.log(x)
-// )
-// .catch((err)=>{console.log(err)
-// })
+Student.find({})
+.then((x)=>console.log(x)
+)
+.catch((err)=>{console.log(err)
+})
 
 //using findOne() =>>>>>>>>>>---------- returns a single record/doc in object
 // Student.findOne({name:"Minisha"},{name:1, _id:0})
@@ -75,3 +75,26 @@ require("./config/db");
 //   .catch((err) => {
 //     console.log(err);
 //   });
+
+//3.update operation 
+// using =>>>>>>>>>>>>>>-----updateOne()
+// Student.updateOne({name:"Minisha"},{age:25})
+// .then(()=>{console.log("Data updated");
+// })
+// .catch((err)=>{console.log(err);
+// })
+
+//using =>>>>>>>>>>>>>>>---------updateMany()
+// Student.updateMany({course:"MERN"},{course:"MongoDB,ExpressJS,ReactJS,NodeJS"})
+// .then(()=>{console.log("Data updated");
+// })
+// .catch((err)=>{console.log(err);
+// })
+
+
+//using =>>>>>>>>>>>>>>----findByIdAndUpdate()
+Student.findByIdAndUpdate("6a716fdde4d13025a0a29ede",{course:"Java Full stack"})
+.then(()=>{console.log("Data updated By Id");
+})
+.catch((err)=>{console.log(err);
+})
