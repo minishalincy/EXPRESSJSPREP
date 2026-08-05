@@ -93,8 +93,15 @@ Student.find({})
 
 
 //using =>>>>>>>>>>>>>>----findByIdAndUpdate()
-Student.findByIdAndUpdate("6a716fdde4d13025a0a29ede",{course:"Java Full stack"})
-.then(()=>{console.log("Data updated By Id");
+// Student.findByIdAndUpdate("6a716fdde4d13025a0a29ede",{course:"Java Full stack"})
+// .then(()=>{console.log("Data updated By Id");
+// })
+// .catch((err)=>{console.log(err);
+// })
+
+//4. Delete operation
+//using deleteOne()
+Student.deleteOne({name:"Linc"})
+.then(()=>{console.log("student deleted")
 })
-.catch((err)=>{console.log(err);
-})
+.catch((err)=>{console.log(err)})
